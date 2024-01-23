@@ -29,9 +29,7 @@ export const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" /*element={<Layout />}*/>
           <Route path="/" index element={<HomePage />}></Route>
-         
            <Route
             path="/catalogue"
             element={
@@ -44,8 +42,6 @@ export const App = () => {
               <RestrictedRoute redirectTo="/favorites" component={<Favorites />} />
             }
           />
-          
-        </Route>
       </Routes>
       <Toaster position="top-right" />
     </div>
@@ -53,6 +49,7 @@ export const App = () => {
 };
 
 /*
+        <Route path="/" element={<Layout />}>
 <Route path="/forgot-password" element={<ForgetPasswordPage />} />
           <Route path="/recovery" element={<RecoveryPasswordPage />} />
            <Route
@@ -67,4 +64,5 @@ export const App = () => {
               <RestrictedRoute redirectTo="/" component={<SignInPage />} />
             }
           />
+                  </Route>
           */
